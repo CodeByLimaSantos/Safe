@@ -11,6 +11,7 @@ import java.time.LocalDateTime;
 @NoArgsConstructor
 @Getter
 @Setter
+@Builder
 public class Scheduling {
 
     @Id
@@ -30,7 +31,7 @@ public class Scheduling {
     private LocalDateTime endDate;
 
     @Column(nullable = false, length = 80)
-    private Client client;
+    private String client;
 
     @Enumerated(EnumType.STRING)
     @Column(nullable = false)
